@@ -61,19 +61,33 @@ public class FlippingForneymonCard extends ForneymonCard {
         lmuMascot.flip();
         System.out.println(lmuMascot);
         
+        FlippingForneymonCard leafMan = new FlippingForneymonCard("leafboy", "Leafymon", false); 
+        //"Leafymon: leafboy"
+        System.out.println(leafMan);
+        leafMan.flip(); 
+        System.out.println(leafMan.toString());
         
+        FlippingForneymonCard flames = new FlippingForneymonCard("fireeee", "Burnymon", true); 
+        //"?: ?"
+        System.out.println(flames.toString());
+        flames.flip(); 
+        //"Burnymon: fireeee"
+        System.out.println(flames.toString());;
+		
         FlippingForneymonCard missingNu = new FlippingForneymonCard();
         // "?: ?"
         System.out.println(missingNu);
         missingNu.flip();
         // "Burnymon: MissingNu"
         System.out.println(missingNu);
+		
+		
         
         // 2
-        System.out.println(burny.match(missingNu));
-        burny.flip();
+        System.out.println(lmuMascot.match(missingNu));
+        lmuMascot.flip();
         // 0
-        System.out.println(burny.match(missingNu));
+        System.out.println(lmuMascot.match(missingNu));
     }
 	
 	
